@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: make install
-      
       - name: Check out repository code
         uses: actions/checkout@v3
-
+      
+      - run: make install
+      
       - name: Linter
         run: make lint
