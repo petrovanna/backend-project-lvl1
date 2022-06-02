@@ -3,11 +3,9 @@ import readlineSync from 'readline-sync';
 const askUserName = () => {
   const welcomeToBrainGames = 'Welcome to the Brain Games!';
   console.log(welcomeToBrainGames);
-
   const userName = readlineSync.question('May I have your name? ');
   const greeting = `Hello, ${userName}!`;
   console.log(greeting);
-
   const answerYesOrNo = 'Answer "yes" if the number is even, otherwise answer "no".';
   console.log(answerYesOrNo);
 
@@ -34,7 +32,6 @@ const askUserName = () => {
       }
     }
   }
-
   return `Congratulations, ${userName}!`;
 };
 export default askUserName;
