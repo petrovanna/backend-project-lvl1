@@ -6,3 +6,6 @@
 
 ### GitHub Actions Linter status:
 [![Linter](https://github.com/petrovanna/backend-project-lvl1/workflows/Linter/badge.svg)](https://github.com/petrovanna/backend-project-lvl1/actions/workflows/lint.yml)
+
+### Brain-even
+https://asciinema.org/a/l5C77BdkwVT46GUyFA7VsN7G0
