@@ -26,10 +26,10 @@ const askUserName = () => {
       const wrongCondition1 = randomNumber % 2 === 0 && answer !== 'yes';
       const wrongCondition2 = randomNumber % 2 !== 0 && answer !== 'no';
 
-      if (wrongCondition1) {
+      if (wrongCondition1 === true) {
         return (`"${answer}" is wrong answer ;(. Correct answer was "yes".\nLet's try again, ${userName}!`);
       }
-      if (wrongCondition2) {
+      if (wrongCondition2 === true) {
         return (`"${answer}" is wrong answer ;(. Correct answer was "no".\nLet's try again, ${userName}!`);
       }
     }
