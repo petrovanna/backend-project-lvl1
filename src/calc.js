@@ -19,21 +19,27 @@ const playBrainCalc = () => {
     console.log(question());
 
     const userAnswer = readlineSync.question('Your answer: ');
-    const condition1 = randomOperator === '+' && Number(userAnswer) === randomNumber1 + randomNumber2;
-    const condition2 = randomOperator === '-' && Number(userAnswer) === randomNumber1 - randomNumber2;
-    const condition3 = randomOperator === '*' && Number(userAnswer) === randomNumber1 * randomNumber2;
+    const rightCondition1 = randomOperator === '+' && Number(userAnswer) === randomNumber1 + randomNumber2;
+    const rightCondition2 = randomOperator === '-' && Number(userAnswer) === randomNumber1 - randomNumber2;
+    const rightCondition3 = randomOperator === '*' && Number(userAnswer) === randomNumber1 * randomNumber2;
 
-    if (condition1 === true || condition2 === true || condition3 === true) {
+    if (rightCondition1 === true || rightCondition2 === true || rightCondition3 === true) {
       console.log('Correct!');
-    } else if (condition1 === false) {
-      const sum = randomNumber1 + randomNumber2;
-      return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${sum}".\nLet's try again, ${userName}!`);
-    } else if (condition2 === false) {
-      const dif = randomNumber1 - randomNumber2;
-      return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${dif}".\nLet's try again, ${userName}!`);
     } else {
-      const mult = randomNumber1 * randomNumber2;
-      return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${mult}".\nLet's try again, ${userName}!`);
+      const wrongCondition1 = randomOperator === '+' && Number(userAnswer) !== randomNumber1 + randomNumber2;
+      const wrongCondition2 = randomOperator === '-' && Number(userAnswer) !== randomNumber1 - randomNumber2;
+      const wrongCondition3 = randomOperator === '*' && Number(userAnswer) !== randomNumber1 * randomNumber2;
+
+      if (wrongCondition1 === true) {
+        const sum = randomNumber1 + randomNumber2;
+        return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${sum}".\nLet's try again, ${userName}!`);
+      } if (wrongCondition2 === true) {
+        const dif = randomNumber1 - randomNumber2;
+        return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${dif}".\nLet's try again, ${userName}!`);
+      } if (wrongCondition3 === true) {
+        const mult = randomNumber1 * randomNumber2;
+        return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${mult}".\nLet's try again, ${userName}!`);
+      }
     }
   }
   return `Congratulations, ${userName}!`;
