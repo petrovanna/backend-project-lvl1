@@ -11,7 +11,7 @@ const playBrainCalc = () => {
 
   for (let i = 0; i < 3; i += 1) {
     const randomNumber1 = Math.floor(Math.random() * 100);
-    const randomNumber2 = Math.floor(Math.random() * 100);
+    const randomNumber2 = Math.floor(Math.random() * 10);
     const operators = ['+', '-', '*'];
     const randomOperator = operators[Math.floor(operators.length * Math.random())];
     const randomExpression = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
