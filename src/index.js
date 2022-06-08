@@ -6,31 +6,11 @@ const playBrainGames = () => {
   const greeting = `Hello, ${userName}!`;
   console.log(greeting);
 
-  printRules();
+  // описание каждой игры
+  // цикл (3 раунда)
+  // три правильных - Correct!
+  // не правильный - Try again!
 
-  for (let i = 0; i < 3; i += 1) {
-    const randomNumber = Math.floor(Math.random() * 100);
-    const question = () => `Question: ${randomNumber}`;
-    console.log(question());
-
-    const answer = readlineSync.question('Your answer: ');
-    const rightCondition1 = randomNumber % 2 === 0 && answer === 'yes';
-    const rightCondition2 = randomNumber % 2 !== 0 && answer === 'no';
-
-    if (rightCondition1 === true || rightCondition2 === true) {
-      console.log('Correct!');
-    } else {
-      const wrongCondition1 = randomNumber % 2 === 0 && answer !== 'yes';
-      const wrongCondition2 = randomNumber % 2 !== 0 && answer !== 'no';
-
-      if (wrongCondition1 === true) {
-        return (`"${answer}" is wrong answer ;(. Correct answer was "yes".\nLet's try again, ${userName}!`);
-      }
-      if (wrongCondition2 === true) {
-        return (`"${answer}" is wrong answer ;(. Correct answer was "no".\nLet's try again, ${userName}!`);
-      }
-    }
-  }
   return `Congratulations, ${userName}!`;
 };
 export default playBrainGames;
