@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync';
+// import readlineSync from 'readline-sync';
 
 /* const playBrainEven = () => {
   console.log('Welcome to the Brain Games!');
@@ -23,10 +23,12 @@ import readlineSync from 'readline-sync';
       const wrongCondition2 = randomNumber % 2 !== 0 && answer !== 'no';
 
       if (wrongCondition1 === true) {
-        return (`"${answer}" is wrong answer ;(. Correct answer was "yes".\nLet's try again, ${userName}!`);
+        return (`"${answer}" is wrong answer ;(.
+          Correct answer was "yes".\nLet's try again, ${userName}!`);
       }
       if (wrongCondition2 === true) {
-        return (`"${answer}" is wrong answer ;(. Correct answer was "no".\nLet's try again, ${userName}!`);
+        return (`"${answer}" is wrong answer ;(.
+          Correct answer was "no".\nLet's try again, ${userName}!`);
       }
     }
   }
@@ -34,17 +36,20 @@ import readlineSync from 'readline-sync';
 };
 export default playBrainEven; */
 
-import { playBrainGames, question } from '../index.js';
+import readlineSync from 'readline-sync';
+import {
+  getGameDiscription, getAQuestion, finishGame1, finishGame2, congratulateUser,
+} from '../index.js';
 
-export const discriptionOfGame = () => {
+export const printDiscriptionOfGame = () => {
   const evenDiscription = 'Answer "yes" if the number is even, otherwise answer "no".';
-  playBrainGames(evenDiscription);
+  getGameDiscription(evenDiscription);
 };
 
-export const gameQuestion = () => {
+export const playBrainGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const randomNumber = Math.floor(Math.random() * 100);
-    question(randomNumber);
+    getAQuestion(randomNumber);
     const answer = readlineSync.question('Your answer: ');
     const evenNumber = randomNumber % 2 === 0;
     const unEvenNumber = randomNumber % 2 !== 0;
@@ -52,8 +57,19 @@ export const gameQuestion = () => {
     const rightCondition2 = unEvenNumber && answer === 'no';
     const rightCommonCondition = rightCondition1 === true || rightCondition2 === true;
 
-    if (rightCommonCondition) {
+    if (rightCommonCondition === true) {
       console.log('Correct!');
+    } else {
+      const wrongCondition1 = evenNumber && answer !== 'yes';
+      const wrongCondition2 = unEvenNumber && answer !== 'no';
+
+      if (wrongCondition1 === true) {
+        return finishGame1(answer);
+      }
+      if (wrongCondition2 === true) {
+        return finishGame2(answer);
+      }
     }
   }
+  return congratulateUser();
 };

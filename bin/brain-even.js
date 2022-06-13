@@ -4,7 +4,7 @@
 
 console.log(playBrainEven()); */
 
-import { discriptionOfGame, gameQuestion } from '../src/games/even.js';
+import { printDiscriptionOfGame, playBrainGame } from '../src/games/even.js';
 
-discriptionOfGame();
-gameQuestion();
+printDiscriptionOfGame();
+playBrainGame();
