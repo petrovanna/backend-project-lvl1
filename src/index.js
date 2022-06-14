@@ -26,3 +26,8 @@ export const congratulateUser = () => {
   const congratulations = `Congratulations, ${userName}!`;
   console.log(congratulations);
 };
+
+export const finishGame3 = (answer, hidden) => {
+  const userLost2 = `"${answer}" is wrong answer ;(. Correct answer was "${hidden}".\nLet's try again, ${userName}!`;
+  console.log(userLost2);
+};
