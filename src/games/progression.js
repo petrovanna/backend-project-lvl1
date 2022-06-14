@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
-import { getGameDiscription, getAQuestion, congratulateUser } from '../index.js';
+import {
+  getGameDiscription, getAQuestion, congratulateUser, finishGame3,
+} from '../index.js';
 
 export const printDiscriptionOfGame = () => {
   const evenDiscription = 'What number is missing in the progression?';
@@ -16,20 +18,24 @@ const progression = () => {
     nextNumber += step;
     result += `${nextNumber} `;
   }
-  const arr = result.split([' ']);
-  const arrIndex = Math.floor(Math.random() * 10);
-  // const hidden = arr[arrIndex];
-  arr[arrIndex] = '..';
-  return arr.join(' ');
+  return result;
 };
 
 export const playBrainGame = () => {
   for (let i = 0; i < 3; i += 1) {
-    getAQuestion(progression());
+    const arr = progression().split([' ']);
+    const arrIndex = Math.floor(Math.random() * 10);
+    const hidden = arr[arrIndex];
+    arr[arrIndex] = '..';
+    const arrHidden = arr.join(' ');
+    getAQuestion(arrHidden);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === '15') { // вписала число, чтобы не ругался линтер
+    if (answer === hidden) {
       console.log('Correct!');
+    }
+    if (answer !== hidden) {
+      return finishGame3(answer, hidden);
     }
   }
   return congratulateUser();
