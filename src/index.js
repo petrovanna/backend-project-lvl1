@@ -28,6 +28,11 @@ export const congratulateUser = () => {
 };
 
 export const finishGame3 = (answer, hidden) => {
-  const userLost2 = `"${answer}" is wrong answer ;(. Correct answer was "${hidden}".\nLet's try again, ${userName}!`;
-  console.log(userLost2);
+  const userLost3 = `"${answer}" is wrong answer ;(. Correct answer was "${hidden}".\nLet's try again, ${userName}!`;
+  console.log(userLost3);
+};
+
+export const finishGame4 = (userAnswer, sumOfRandomNumbers) => {
+  const userLost4 = `"${userAnswer}" is wrong answer ;(. Correct answer was "${sumOfRandomNumbers}".\nLet's try again, ${userName}!`;
+  console.log(userLost4);
 };
