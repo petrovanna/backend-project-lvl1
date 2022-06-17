@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
-import playBrainCalc from '../src/games/calc.js';
+/* import playBrainCalc from '../src/games/calc.js';
 
-console.log(playBrainCalc());
+console.log(playBrainCalc()); */
+
+import { printDiscriptionOfGame, playBrainGame } from '../src/games/calc.js';
+
+printDiscriptionOfGame();
+playBrainGame();

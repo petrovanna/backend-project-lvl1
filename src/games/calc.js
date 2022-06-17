@@ -1,47 +1,49 @@
 import readlineSync from 'readline-sync';
+import {
+  getAQuestion, getGameDiscription, congratulateUser, finishGame4,
+} from '../index.js';
 
-const playBrainCalc = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  const greeting = `Hello, ${userName}!`;
-  console.log(greeting);
+export const printDiscriptionOfGame = () => {
+  const evenDiscription = 'What is the result of the expression?';
+  getGameDiscription(evenDiscription);
+};
 
-  const gameQuestion = 'What is the result of the expression?';
-  console.log(gameQuestion);
-
+export const playBrainGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const randomNumber1 = Math.floor(Math.random() * 100);
     const randomNumber2 = Math.floor(Math.random() * 10);
     const operators = ['+', '-', '*'];
     const randomOperator = operators[Math.floor(operators.length * Math.random())];
     const randomExpression = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
-    const question = () => `Question: ${randomExpression}`;
-    console.log(question());
 
+    getAQuestion(randomExpression);
     const userAnswer = readlineSync.question('Your answer: ');
-    const rightCondition1 = randomOperator === '+' && Number(userAnswer) === randomNumber1 + randomNumber2;
-    const rightCondition2 = randomOperator === '-' && Number(userAnswer) === randomNumber1 - randomNumber2;
-    const rightCondition3 = randomOperator === '*' && Number(userAnswer) === randomNumber1 * randomNumber2;
+
+    const sumOfRandomNumbers = randomNumber1 + randomNumber2;
+    const differenceOfRandomNumbers = randomNumber1 - randomNumber2;
+    const multiplicationOfRandomNumbers = randomNumber1 * randomNumber2;
+
+    const rightCondition1 = randomOperator === '+' && Number(userAnswer) === sumOfRandomNumbers;
+    const rightCondition2 = randomOperator === '-' && Number(userAnswer) === differenceOfRandomNumbers;
+    const rightCondition3 = randomOperator === '*' && Number(userAnswer) === multiplicationOfRandomNumbers;
 
     if (rightCondition1 === true || rightCondition2 === true || rightCondition3 === true) {
       console.log('Correct!');
     } else {
-      const wrongCondition1 = randomOperator === '+' && Number(userAnswer) !== randomNumber1 + randomNumber2;
-      const wrongCondition2 = randomOperator === '-' && Number(userAnswer) !== randomNumber1 - randomNumber2;
-      const wrongCondition3 = randomOperator === '*' && Number(userAnswer) !== randomNumber1 * randomNumber2;
+      const wrongCondition1 = randomOperator === '+' && Number(userAnswer) !== sumOfRandomNumbers;
+      const wrongCondition2 = randomOperator === '-' && Number(userAnswer) !== differenceOfRandomNumbers;
+      const wrongCondition3 = randomOperator === '*' && Number(userAnswer) !== multiplicationOfRandomNumbers;
 
       if (wrongCondition1 === true) {
-        const sum = randomNumber1 + randomNumber2;
-        return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${sum}".\nLet's try again, ${userName}!`);
-      } if (wrongCondition2 === true) {
-        const dif = randomNumber1 - randomNumber2;
-        return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${dif}".\nLet's try again, ${userName}!`);
-      } if (wrongCondition3 === true) {
-        const mult = randomNumber1 * randomNumber2;
-        return (`"${userAnswer}" is wrong answer ;(. Correct answer was "${mult}".\nLet's try again, ${userName}!`);
+        return finishGame4(userAnswer, sumOfRandomNumbers);
+      }
+      if (wrongCondition2 === true) {
+        return finishGame4(userAnswer, differenceOfRandomNumbers);
+      }
+      if (wrongCondition3 === true) {
+        return finishGame4(userAnswer, multiplicationOfRandomNumbers);
       }
     }
   }
-  return `Congratulations, ${userName}!`;
+  return congratulateUser();
 };
-export default playBrainCalc;
