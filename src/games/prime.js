@@ -9,6 +9,9 @@ export const printDiscriptionOfGame = () => {
 };
 
 const isItPrimeNumber = (randomNumber) => {
+  if (randomNumber === 0) {
+    return 'no';
+  }
   for (let i = 2; i <= randomNumber / 2; i += 1) {
     const remainder = randomNumber % i === 0;
     if (remainder === true) {
