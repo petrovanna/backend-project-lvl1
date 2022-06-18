@@ -19,7 +19,7 @@ const getGreatestCommonDivisor = (num1, num2) => {
     if (counter === 0) {
       return acc;
     }
-    return iter(counter, acc % remainder);
+    return iter(counter, acc % counter);
   };
   return iter(num2, remainder);
 };
