@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import {
-  getGameDiscription, getAQuestion, congratulateUser, finishGame3,
+  getGameDiscription, getAQuestion, congratulateUser, finishGame,
 } from '../index.js';
 
 export const printDiscriptionOfGame = () => {
@@ -35,7 +35,8 @@ export const playBrainGame = () => {
       console.log('Correct!');
     }
     if (answer !== hidden) {
-      return finishGame3(answer, hidden);
+      const rightAnswer = hidden;
+      return finishGame(answer, rightAnswer);
     }
   }
   return congratulateUser();

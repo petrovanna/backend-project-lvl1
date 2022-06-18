@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import {
-  getGameDiscription, getAQuestion, finishGame1, finishGame2, congratulateUser,
+  getGameDiscription, getAQuestion, finishGame, congratulateUser,
 } from '../index.js';
 
 export const printDiscriptionOfGame = () => {
@@ -26,10 +26,12 @@ export const playBrainGame = () => {
       const wrongCondition2 = unEvenNumber && answer !== 'no';
 
       if (wrongCondition1 === true) {
-        return finishGame1(answer);
+        const rightAnswer = 'yes';
+        return finishGame(answer, rightAnswer);
       }
       if (wrongCondition2 === true) {
-        return finishGame2(answer);
+        const rightAnswer = 'no';
+        return finishGame(answer, rightAnswer);
       }
     }
   }

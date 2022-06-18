@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import {
-  getAQuestion, getGameDiscription, congratulateUser, finishGame4,
+  getAQuestion, getGameDiscription, congratulateUser, finishGame,
 } from '../index.js';
 
 export const printDiscriptionOfGame = () => {
@@ -17,31 +17,34 @@ export const playBrainGame = () => {
     const randomExpression = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
 
     getAQuestion(randomExpression);
-    const userAnswer = readlineSync.question('Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
 
     const sumOfRandomNumbers = randomNumber1 + randomNumber2;
     const differenceOfRandomNumbers = randomNumber1 - randomNumber2;
     const multiplicationOfRandomNumbers = randomNumber1 * randomNumber2;
 
-    const rightCondition1 = randomOperator === '+' && Number(userAnswer) === sumOfRandomNumbers;
-    const rightCondition2 = randomOperator === '-' && Number(userAnswer) === differenceOfRandomNumbers;
-    const rightCondition3 = randomOperator === '*' && Number(userAnswer) === multiplicationOfRandomNumbers;
+    const rightCondition1 = randomOperator === '+' && Number(answer) === sumOfRandomNumbers;
+    const rightCondition2 = randomOperator === '-' && Number(answer) === differenceOfRandomNumbers;
+    const rightCondition3 = randomOperator === '*' && Number(answer) === multiplicationOfRandomNumbers;
 
     if (rightCondition1 === true || rightCondition2 === true || rightCondition3 === true) {
       console.log('Correct!');
     } else {
-      const wrongCondition1 = randomOperator === '+' && Number(userAnswer) !== sumOfRandomNumbers;
-      const wrongCondition2 = randomOperator === '-' && Number(userAnswer) !== differenceOfRandomNumbers;
-      const wrongCondition3 = randomOperator === '*' && Number(userAnswer) !== multiplicationOfRandomNumbers;
+      const wrongCondition1 = randomOperator === '+' && Number(answer) !== sumOfRandomNumbers;
+      const wrongCondition2 = randomOperator === '-' && Number(answer) !== differenceOfRandomNumbers;
+      const wrongCondition3 = randomOperator === '*' && Number(answer) !== multiplicationOfRandomNumbers;
 
       if (wrongCondition1 === true) {
-        return finishGame4(userAnswer, sumOfRandomNumbers);
+        const rightAnswer = sumOfRandomNumbers;
+        return finishGame(answer, rightAnswer);
       }
       if (wrongCondition2 === true) {
-        return finishGame4(userAnswer, differenceOfRandomNumbers);
+        const rightAnswer = differenceOfRandomNumbers;
+        return finishGame(answer, rightAnswer);
       }
       if (wrongCondition3 === true) {
-        return finishGame4(userAnswer, multiplicationOfRandomNumbers);
+        const rightAnswer = multiplicationOfRandomNumbers;
+        return finishGame(answer, rightAnswer);
       }
     }
   }

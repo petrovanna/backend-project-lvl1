@@ -12,27 +12,12 @@ export const getAQuestion = (playBrainGame) => {
   console.log(`Question: ${playBrainGame}`);
 };
 
-export const finishGame1 = (answer) => {
-  const userLost1 = `"${answer}" is wrong answer ;(. Correct answer was "yes".\nLet's try again, ${userName}!`;
-  console.log(userLost1);
-};
-
-export const finishGame2 = (answer) => {
-  const userLost2 = `"${answer}" is wrong answer ;(. Correct answer was "no".\nLet's try again, ${userName}!`;
-  console.log(userLost2);
+export const finishGame = (answer, rightAnswer) => {
+  const userLost = `"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${userName}!`;
+  console.log(userLost);
 };
 
 export const congratulateUser = () => {
   const congratulations = `Congratulations, ${userName}!`;
   console.log(congratulations);
-};
-
-export const finishGame3 = (answer, hidden) => {
-  const userLost3 = `"${answer}" is wrong answer ;(. Correct answer was "${hidden}".\nLet's try again, ${userName}!`;
-  console.log(userLost3);
-};
-
-export const finishGame4 = (userAnswer, sumOfRandomNumbers) => {
-  const userLost4 = `"${userAnswer}" is wrong answer ;(. Correct answer was "${sumOfRandomNumbers}".\nLet's try again, ${userName}!`;
-  console.log(userLost4);
 };
