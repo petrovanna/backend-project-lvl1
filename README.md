@@ -42,10 +42,15 @@ npm link
 ### Run game:
 
 Enter the command of the game you want to play:
+
 brain-even
+
 brain-prime
+
 brain-progression
+
 brain-gcd
+
 brain-calc
 
 
