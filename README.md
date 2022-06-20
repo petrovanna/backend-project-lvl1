@@ -33,6 +33,8 @@ https://asciinema.org/a/lGCcsPOVLrWKaT7bW9Qtz9ykj
 
 ### Installation:
 
+Make sure you have Node.js version 13 or higher
+
 git clone git@github.com:petrovanna/backend-project-lvl1.git
 
 npm ci
