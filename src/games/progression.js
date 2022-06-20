@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import {
   getGameDiscription, getAQuestion, congratulateUser, finishGame,
 } from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 export const printDiscriptionOfGame = () => {
   const evenDiscription = 'What number is missing in the progression?';
@@ -11,7 +12,7 @@ export const printDiscriptionOfGame = () => {
 const progression = () => {
   let result = '';
   const firstNumber = 0;
-  const step = Math.floor(Math.random() * 10);
+  const step = getRandomNumber(10);
   let nextNumber = firstNumber + step;
 
   for (let i = 0; i < 10; i += 1) {
@@ -24,7 +25,7 @@ const progression = () => {
 export const playBrainGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const arr = progression().split([' ']);
-    const arrIndex = Math.floor(Math.random() * 10);
+    const arrIndex = getRandomNumber(10);
     const hidden = arr[arrIndex];
     arr[arrIndex] = '..';
     const arrHidden = arr.join(' ');

@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import {
   getGameDiscription, getAQuestion, congratulateUser, finishGame,
 } from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 export const printDiscriptionOfGame = () => {
   const evenDiscription = 'Find the greatest common divisor of given numbers.';
@@ -26,8 +27,8 @@ const getGreatestCommonDivisor = (num1, num2) => {
 
 export const playBrainGame = () => {
   for (let i = 0; i < 3; i += 1) {
-    const randomNumber1 = Math.floor(Math.random() * 100);
-    const randomNumber2 = Math.floor(Math.random() * 10);
+    const randomNumber1 = getRandomNumber(100);
+    const randomNumber2 = getRandomNumber(10);
     const randomExpression = `${randomNumber1} ${randomNumber2}`;
     getAQuestion(randomExpression);
     const answer = readlineSync.question('Your answer: ');

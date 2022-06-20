@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import {
   getGameDiscription, getAQuestion, finishGame, congratulateUser,
 } from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 export const printDiscriptionOfGame = () => {
   const evenDiscription = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -10,7 +11,7 @@ export const printDiscriptionOfGame = () => {
 
 export const playBrainGame = () => {
   for (let i = 0; i < 3; i += 1) {
-    const randomNumber = Math.floor(Math.random() * 100);
+    const randomNumber = getRandomNumber(100);
     getAQuestion(randomNumber);
     const answer = readlineSync.question('Your answer: ');
     const evenNumber = randomNumber % 2 === 0;

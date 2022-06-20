@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import {
   getAQuestion, getGameDiscription, congratulateUser, finishGame,
 } from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 export const printDiscriptionOfGame = () => {
   const evenDiscription = 'What is the result of the expression?';
@@ -10,8 +11,8 @@ export const printDiscriptionOfGame = () => {
 
 export const playBrainGame = () => {
   for (let i = 0; i < 3; i += 1) {
-    const randomNumber1 = Math.floor(Math.random() * 100);
-    const randomNumber2 = Math.floor(Math.random() * 10);
+    const randomNumber1 = getRandomNumber(100);
+    const randomNumber2 = getRandomNumber(10);
     const operators = ['+', '-', '*'];
     const randomOperator = operators[Math.floor(operators.length * Math.random())];
     const randomExpression = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
