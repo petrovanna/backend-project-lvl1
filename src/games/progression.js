@@ -1,15 +1,9 @@
-import readlineSync from 'readline-sync';
-import {
-  getGameDiscription, getAQuestion, congratulateUser, finishGame,
-} from '../index.js';
+import gameEngine from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
-export const printDiscriptionOfGame = () => {
-  const evenDiscription = 'What number is missing in the progression?';
-  getGameDiscription(evenDiscription);
-};
+const discriptionOfGame = 'What number is missing in the progression?';
 
-const progression = () => {
+const getProgression = () => {
   let result = '';
   const firstNumber = 0;
   const step = getRandomNumber(10);
@@ -22,23 +16,17 @@ const progression = () => {
   return result;
 };
 
-export const playBrainGame = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const arr = progression().split([' ']);
-    const arrIndex = getRandomNumber(10);
-    const hidden = arr[arrIndex];
-    arr[arrIndex] = '..';
-    const arrHidden = arr.join(' ');
-    getAQuestion(arrHidden);
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === hidden) {
-      console.log('Correct!');
-    }
-    if (answer !== hidden) {
-      const rightAnswer = hidden;
-      return finishGame(answer, rightAnswer);
-    }
-  }
-  return congratulateUser();
+const getQuestionAndRightAnswer = () => {
+  const progression = getProgression().split([' ']);
+  const progressionStep = getRandomNumber(10);
+  const hiddenNumber = progression[progressionStep];
+  progression[progressionStep] = '..';
+  const progressionWithHiddenNumber = progression.join(' ');
+  const arr = [progressionWithHiddenNumber, hiddenNumber];
+  return arr;
 };
+
+const playBrainProgression = () => {
+  gameEngine(discriptionOfGame, getQuestionAndRightAnswer);
+};
+export default playBrainProgression;
