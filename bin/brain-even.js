@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { printDiscriptionOfGame, playBrainGame } from '../src/games/even.js';
+import playBrainEven from '../src/games/even.js';
 
-printDiscriptionOfGame();
-playBrainGame();
+playBrainEven();

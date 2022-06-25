@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { printDiscriptionOfGame, playBrainGame } from '../src/games/gcd.js';
+import playBrainGcd from '../src/games/gcd.js';
 
-printDiscriptionOfGame();
-playBrainGame();
+playBrainGcd();
