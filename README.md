@@ -13,7 +13,7 @@ You need three correct answers for winning.
 
 ### Brain-even
 
-https://asciinema.org/a/l5C77BdkwVT46GUyFA7VsN7G0
+https://asciinema.org/a/ftA00ECCo0WHRdtl9J4CDwEoN
 
 ### Brain-calc
 
