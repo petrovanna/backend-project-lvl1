@@ -1,23 +1,26 @@
 import readlineSync from 'readline-sync';
 
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
+const gameEngine = (discriptionOfGame, getQuestionAndRightAnswer) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 
-export const getGameDiscription = (printDiscriptionOfGame) => {
-  console.log(printDiscriptionOfGame);
-};
+  console.log(discriptionOfGame);
 
-export const getAQuestion = (playBrainGame) => {
-  console.log(`Question: ${playBrainGame}`);
-};
+  const countOfRounds = 3;
 
-export const finishGame = (answer, rightAnswer) => {
-  const userLost = `"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${userName}!`;
-  console.log(userLost);
-};
+  for (let i = 0; i < countOfRounds; i += 1) {
+    const questionAndRightAnswer = getQuestionAndRightAnswer();
+    const question = questionAndRightAnswer[0];
+    const rightAnswer = questionAndRightAnswer[1];
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
 
-export const congratulateUser = () => {
-  const congratulations = `Congratulations, ${userName}!`;
-  console.log(congratulations);
+    if (answer !== rightAnswer) {
+      return console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${userName}!`);
+    }
+    console.log('Correct!');
+  }
+  return console.log(`Congratulations, ${userName}!`);
 };
+export default gameEngine;
