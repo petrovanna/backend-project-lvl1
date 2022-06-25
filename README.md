@@ -9,7 +9,7 @@
 
 Welcome to Brain Games! Let me introduce you five mathematics games.
 Each game consists of three rounds. Player needs to answer a question.
-You need three correct ansewrs for winning. 
+You need three correct answers for winning. 
 
 ### Brain-even
 
