@@ -41,6 +41,8 @@ npm ci
 
 npm link
 
+https://asciinema.org/a/YMgRL7uYKPI1iCl4ddHlFAyjY
+
 ### Run game:
 
 Enter the command of the game you want to play:
