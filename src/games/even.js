@@ -6,7 +6,7 @@ const discriptionOfGame = 'Answer "yes" if the number is even, otherwise answer 
 const isNumberEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 const getQuestionAndRightAnswer = () => {
-  const randomNumber = getRandomNumber(100);
+  const randomNumber = getRandomNumber(0, 100);
   const rightAnswer = isNumberEven(randomNumber);
   const arr = [randomNumber, rightAnswer];
   return arr;

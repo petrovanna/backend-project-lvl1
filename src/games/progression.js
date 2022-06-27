@@ -6,7 +6,7 @@ const discriptionOfGame = 'What number is missing in the progression?';
 const getProgression = () => {
   let result = '';
   const firstNumber = 0;
-  const step = getRandomNumber(10);
+  const step = getRandomNumber(0, 10);
   let nextNumber = firstNumber + step;
 
   for (let i = 0; i < 10; i += 1) {
@@ -18,7 +18,7 @@ const getProgression = () => {
 
 const getQuestionAndRightAnswer = () => {
   const progression = getProgression().split([' ']);
-  const progressionStep = getRandomNumber(10);
+  const progressionStep = getRandomNumber(0, 10);
   const hiddenNumber = progression[progressionStep];
   progression[progressionStep] = '..';
   const progressionWithHiddenNumber = progression.join(' ');

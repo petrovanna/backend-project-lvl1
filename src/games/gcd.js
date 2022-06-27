@@ -20,8 +20,8 @@ const getGreatestCommonDivisor = (num1, num2) => {
 };
 
 const getQuestionAndRightAnswer = () => {
-  const randomNumber1 = getRandomNumber(100);
-  const randomNumber2 = getRandomNumber(10);
+  const randomNumber1 = getRandomNumber(0, 100);
+  const randomNumber2 = getRandomNumber(0, 50);
   const randomExpression = `${randomNumber1} ${randomNumber2}`;
   const rightAnswer = String(getGreatestCommonDivisor(randomNumber1, randomNumber2));
   const arr = [randomExpression, rightAnswer];
