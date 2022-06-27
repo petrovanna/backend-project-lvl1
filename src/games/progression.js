@@ -13,12 +13,12 @@ const getProgression = () => {
     nextNumber += step;
     result += `${nextNumber} `;
   }
-  return result;
+  return result.trim();
 };
 
 const getQuestionAndRightAnswer = () => {
   const progression = getProgression().split([' ']);
-  const progressionStep = getRandomNumber(0, 10);
+  const progressionStep = getRandomNumber(0, 9);
   const hiddenNumber = progression[progressionStep];
   progression[progressionStep] = '..';
   const progressionWithHiddenNumber = progression.join(' ');
