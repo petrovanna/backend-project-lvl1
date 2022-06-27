@@ -5,17 +5,14 @@ const discriptionOfGame = 'What is the result of the expression?';
 
 const getResultOfTheExpression = (str) => {
   const arr = str.split([' ']);
-  let result = [];
-  if (arr[1] === '+') {
-    result = Number(arr[0]) + Number(arr[2]);
+  switch (arr[1]) {
+    case '+':
+      return Number(arr[0]) + Number(arr[2]);
+    case '-':
+      return Number(arr[0]) - Number(arr[2]);
+    default:
   }
-  if (arr[1] === '-') {
-    result = Number(arr[0] - arr[2]);
-  }
-  if (arr[1] === '*') {
-    result = Number(arr[0] * arr[2]);
-  }
-  return result;
+  return Number(arr[0]) * Number(arr[2]);
 };
 
 const getQuestionAndRightAnswer = () => {
