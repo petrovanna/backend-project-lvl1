@@ -24,8 +24,7 @@ const getQuestionAndRightAnswer = () => {
   const randomNumber2 = getRandomNumber(0, 50);
   const randomExpression = `${randomNumber1} ${randomNumber2}`;
   const rightAnswer = String(getGreatestCommonDivisor(randomNumber1, randomNumber2));
-  const arr = [randomExpression, rightAnswer];
-  return arr;
+  return [randomExpression, rightAnswer];
 };
 
 const playBrainGcd = () => {

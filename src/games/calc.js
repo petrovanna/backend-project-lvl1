@@ -22,8 +22,7 @@ const getQuestionAndRightAnswer = () => {
   const randomOperator = operators[Math.floor(operators.length * Math.random())];
   const randomExpression = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
   const rightAnswer = String(getResultOfTheExpression(randomExpression));
-  const arr = [randomExpression, rightAnswer];
-  return arr;
+  return [randomExpression, rightAnswer];
 };
 
 const playBrainCalc = () => {

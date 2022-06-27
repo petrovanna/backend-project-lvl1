@@ -8,8 +8,7 @@ const isNumberEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 const getQuestionAndRightAnswer = () => {
   const randomNumber = getRandomNumber(1, 100);
   const rightAnswer = isNumberEven(randomNumber);
-  const arr = [randomNumber, rightAnswer];
-  return arr;
+  return [randomNumber, rightAnswer];
 };
 
 const playBrainEven = () => {

@@ -22,8 +22,7 @@ const getQuestionAndRightAnswer = () => {
   const hiddenNumber = progression[progressionStep];
   progression[progressionStep] = '..';
   const progressionWithHiddenNumber = progression.join(' ');
-  const arr = [progressionWithHiddenNumber, hiddenNumber];
-  return arr;
+  return [progressionWithHiddenNumber, hiddenNumber];
 };
 
 const playBrainProgression = () => {
