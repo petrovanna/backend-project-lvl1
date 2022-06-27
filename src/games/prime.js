@@ -17,9 +17,9 @@ const isItPrimeNumber = (number) => {
 };
 
 const getQuestionAndRightAnswer = () => {
-  const randomNumber = getRandomNumber(0, 100);
-  const rightAnswer = isItPrimeNumber(randomNumber);
-  return [randomNumber, rightAnswer];
+  const number = getRandomNumber(0, 100);
+  const rightAnswer = isItPrimeNumber(number);
+  return [number, rightAnswer];
 };
 
 const playBrainPrime = () => {

@@ -6,9 +6,9 @@ const discriptionOfGame = 'Answer \'yes\' if the number is even, otherwise answe
 const isNumberEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 const getQuestionAndRightAnswer = () => {
-  const randomNumber = getRandomNumber(1, 100);
-  const rightAnswer = isNumberEven(randomNumber);
-  return [randomNumber, rightAnswer];
+  const number = getRandomNumber(1, 100);
+  const rightAnswer = isNumberEven(number);
+  return [number, rightAnswer];
 };
 
 const playBrainEven = () => {

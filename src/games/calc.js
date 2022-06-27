@@ -16,11 +16,11 @@ const getResultOfTheExpression = (str) => {
 };
 
 const getQuestionAndRightAnswer = () => {
-  const randomNumber1 = getRandomNumber(0, 100);
-  const randomNumber2 = getRandomNumber(0, 10);
+  const number1 = getRandomNumber(0, 100);
+  const number2 = getRandomNumber(0, 10);
   const operators = ['+', '-', '*'];
   const randomOperator = operators[Math.floor(operators.length * Math.random())];
-  const randomExpression = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
+  const randomExpression = `${number1} ${randomOperator} ${number2}`;
   const rightAnswer = String(getResultOfTheExpression(randomExpression));
   return [randomExpression, rightAnswer];
 };
