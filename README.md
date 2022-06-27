@@ -13,23 +13,23 @@ You need three correct answers for winning.
 
 ### Brain-even
 
-https://asciinema.org/a/ftA00ECCo0WHRdtl9J4CDwEoN
+[![asciicast](https://asciinema.org/a/ftA00ECCo0WHRdtl9J4CDwEoN.svg)](https://asciinema.org/a/ftA00ECCo0WHRdtl9J4CDwEoN)
 
 ### Brain-calc
 
-https://asciinema.org/a/2Y3lptPSXmmBrbNk9lJq8Tykd
+[![asciicast](https://asciinema.org/a/2Y3lptPSXmmBrbNk9lJq8Tykd.svg)](https://asciinema.org/a/2Y3lptPSXmmBrbNk9lJq8Tykd)
 
 ### Brain-gcd
 
-https://asciinema.org/a/krN2eyYsRMs6Lh89vfm70VM03
+[![asciicast](https://asciinema.org/a/krN2eyYsRMs6Lh89vfm70VM03.svg)](https://asciinema.org/a/krN2eyYsRMs6Lh89vfm70VM03)
 
 ### Brain-progression
 
-https://asciinema.org/a/hCAObmbFI8ROysW39V8PObuVa
+[![asciicast](https://asciinema.org/a/hCAObmbFI8ROysW39V8PObuVa.svg)](https://asciinema.org/a/hCAObmbFI8ROysW39V8PObuVa)
 
 ### Brain-prime
 
-https://asciinema.org/a/lGCcsPOVLrWKaT7bW9Qtz9ykj
+[![asciicast](https://asciinema.org/a/lGCcsPOVLrWKaT7bW9Qtz9ykj.svg)](https://asciinema.org/a/lGCcsPOVLrWKaT7bW9Qtz9ykj)
 
 ### Installation:
 
@@ -41,7 +41,7 @@ npm ci
 
 npm link
 
-https://asciinema.org/a/YMgRL7uYKPI1iCl4ddHlFAyjY
+[![asciicast](https://asciinema.org/a/YMgRL7uYKPI1iCl4ddHlFAyjY.svg)](https://asciinema.org/a/YMgRL7uYKPI1iCl4ddHlFAyjY)
 
 ### Run game:
 
