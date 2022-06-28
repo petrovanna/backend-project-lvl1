@@ -3,8 +3,6 @@ import getRandomNumber from '../randomNumber.js';
 
 const discriptionOfGame = 'Answer \'yes\' if the number is even, otherwise answer \'no\'.';
 
-// const isNumberEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
-
 const isEven = (number) => (number % 2 === 0);
 const check = (number) => {
   const result = isEven(number) ? 'yes' : 'no';
