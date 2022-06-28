@@ -19,7 +19,7 @@ const getQuestionAndRightAnswer = () => {
   const number1 = getRandomNumber(0, 100);
   const number2 = getRandomNumber(0, 10);
   const operators = ['+', '-', '*'];
-  const randomOperator = operators[Math.floor(operators.length * Math.random())];
+  const randomOperator = operators[getRandomNumber(0, 2)];
   const randomExpression = `${number1} ${randomOperator} ${number2}`;
   const rightAnswer = String(getResultOfTheExpression(randomExpression));
   return [randomExpression, rightAnswer];
