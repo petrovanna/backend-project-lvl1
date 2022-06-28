@@ -13,23 +13,23 @@ You need three correct answers for winning.
 
 ### Brain-even
 
-[![asciicast](https://asciinema.org/a/ftA00ECCo0WHRdtl9J4CDwEoN.svg)](https://asciinema.org/a/ftA00ECCo0WHRdtl9J4CDwEoN)
+[![asciicast](https://asciinema.org/a/zCXMEVtcO7fgeKQWOSkaqeIC6.svg)](https://asciinema.org/a/zCXMEVtcO7fgeKQWOSkaqeIC6)
 
 ### Brain-calc
 
-[![asciicast](https://asciinema.org/a/2Y3lptPSXmmBrbNk9lJq8Tykd.svg)](https://asciinema.org/a/2Y3lptPSXmmBrbNk9lJq8Tykd)
+[![asciicast](https://asciinema.org/a/l7ekDkUyAaAtaB6G2K3gH8pDA.svg)](https://asciinema.org/a/l7ekDkUyAaAtaB6G2K3gH8pDA)
 
 ### Brain-gcd
 
-[![asciicast](https://asciinema.org/a/krN2eyYsRMs6Lh89vfm70VM03.svg)](https://asciinema.org/a/krN2eyYsRMs6Lh89vfm70VM03)
+[![asciicast](https://asciinema.org/a/HpkpS5S57UCEY3BqH0uWPnGcm.svg)](https://asciinema.org/a/HpkpS5S57UCEY3BqH0uWPnGcm)
 
 ### Brain-progression
 
-[![asciicast](https://asciinema.org/a/hCAObmbFI8ROysW39V8PObuVa.svg)](https://asciinema.org/a/hCAObmbFI8ROysW39V8PObuVa)
+[![asciicast](https://asciinema.org/a/EXalZvVOHuv9tQghbGONmRhFY.svg)](https://asciinema.org/a/EXalZvVOHuv9tQghbGONmRhFY)
 
 ### Brain-prime
 
-[![asciicast](https://asciinema.org/a/lGCcsPOVLrWKaT7bW9Qtz9ykj.svg)](https://asciinema.org/a/lGCcsPOVLrWKaT7bW9Qtz9ykj)
+[![asciicast](https://asciinema.org/a/dCX3YAyp2LnnMbTGEsh1VjYsl.svg)](https://asciinema.org/a/dCX3YAyp2LnnMbTGEsh1VjYsl)
 
 ### Installation:
 
