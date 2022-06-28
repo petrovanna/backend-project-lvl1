@@ -19,19 +19,6 @@ const check = (number) => {
   return result;
 };
 
-/* const isItPrimeNumber = (number) => {
-  if (number === 0) {
-    return 'no';
-  }
-  for (let i = 2; i <= number / 2; i += 1) {
-    const remainder = number % i === 0;
-    if (remainder === true) {
-      return 'no';
-    }
-  }
-  return 'yes';
-}; */
-
 const getQuestionAndRightAnswer = () => {
   const number = getRandomNumber(0, 100);
   const rightAnswer = check(number);
