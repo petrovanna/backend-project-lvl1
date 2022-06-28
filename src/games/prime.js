@@ -5,7 +5,7 @@ const discriptionOfGame = 'Answer \'yes\' if given number is prime. Otherwise an
 
 const isPrime = (number) => {
   if (number === 0) {
-    return false;
+    return true;
   } for (let i = 2; i <= number / 2; i += 1) {
     const remainder = number % i === 0;
     if (remainder) {
