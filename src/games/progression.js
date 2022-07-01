@@ -7,7 +7,9 @@ const getProgression = (firstNumber, step) => {
   let result = '';
   let nextNumber = firstNumber + step;
 
-  for (let i = 0; i < 10; i += 1) {
+  const progressionLength = 10;
+
+  for (let i = 0; i < progressionLength; i += 1) {
     nextNumber += step;
     result += `${nextNumber} `;
   }
