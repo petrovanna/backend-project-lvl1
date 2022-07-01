@@ -13,9 +13,9 @@ const getGreatestCommonDivisor = (acc, counter) => {
 const getQuestionAndRightAnswer = () => {
   const number1 = getRandomNumber(0, 100);
   const number2 = getRandomNumber(0, 50);
-  const randomExpression = `${number1} ${number2}`;
+  const expression = `${number1} ${number2}`;
   const rightAnswer = String(getGreatestCommonDivisor(number1, number2));
-  return [randomExpression, rightAnswer];
+  return [expression, rightAnswer];
 };
 
 const playBrainGcd = () => {
