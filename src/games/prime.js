@@ -14,14 +14,10 @@ const isPrime = (number) => {
   }
   return false;
 };
-const check = (number) => {
-  const result = isPrime(number) ? 'no' : 'yes';
-  return result;
-};
 
 const getQuestionAndRightAnswer = () => {
   const number = getRandomNumber(0, 100);
-  const rightAnswer = check(number);
+  const rightAnswer = isPrime(number) ? 'no' : 'yes';
   return [number, rightAnswer];
 };
 
