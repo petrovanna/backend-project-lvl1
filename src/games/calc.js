@@ -9,9 +9,10 @@ const getResultOfTheExpression = (number1, number2, operation) => {
       return number1 + number2;
     case '-':
       return number1 - number2;
-    default:
+    case '*':
+      return number1 * number2;
+    default: throw new Error(`operation ${operation} is not supported`);
   }
-  return number1 * number2;
 };
 
 const getQuestionAndRightAnswer = () => {
