@@ -5,12 +5,10 @@ const discriptionOfGame = 'What number is missing in the progression?';
 
 const getProgression = ([firstNumber, step, hiddenIndex]) => {
   const result = [];
-  let current;
-
   const progressionLength = 10;
 
   for (let i = 0; i < progressionLength; i += 1) {
-    current = firstNumber + (step * i);
+    const current = firstNumber + (step * i);
     result.push(current);
   }
   const hiddenNumber = String(result[hiddenIndex]);
