@@ -3,9 +3,10 @@ import getRandomNumber from '../randomNumber.js';
 
 const discriptionOfGame = 'What number is missing in the progression?';
 
+const progressionLength = 10;
+
 const getProgression = ([firstNumber, step, hiddenIndex]) => {
   const result = [];
-  const progressionLength = 10;
 
   for (let i = 0; i < progressionLength; i += 1) {
     const current = firstNumber + (step * i);
